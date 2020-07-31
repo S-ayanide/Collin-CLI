@@ -1,15 +1,9 @@
 const { spawn } = require("child_process");
-const CreateReactApp = (appName, packageManager) => {
+const VueCreate = (appName) => {
 	let script = "";
-	if (packageManager === "npm") {
-		script = spawn("npx", ["create-react-app", appName], {
-			windowsHide: true,
-		});
-	} else if (packageManager === "yarn") {
-		script = spawn("yarn", ["create", "react-app", appName], {
-			windowsHide: true,
-		});
-	}
+	script = spawn("vue", ["create", appName], {
+		windowsHide: true,
+	});
 
 	script.stdout.on("data", (data) => {
 		console.log(` ${data}`);
@@ -25,5 +19,5 @@ const CreateReactApp = (appName, packageManager) => {
 };
 
 module.exports = {
-	CreateReactApp,
+	VueCreate,
 };

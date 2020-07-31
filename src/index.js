@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const cra = require("./scripts/react");
+const vue = require("./scripts/vue");
 
 const existingConfig = fs.existsSync("package.json");
 let content = "";
@@ -33,7 +34,11 @@ if (existingConfig) {
 		])
 		.then((answers) => {
 			console.log(answers);
-			cra.CreateReactApp(answers.projectName, answers.packageManager);
+			if (answers.projectType === "React") {
+				cra.CreateReactApp(answers.projectName, answers.packageManager);
+			} else if (answers.projectType === "Vue") {
+				vue.VueCreate(answers.projectName);
+			}
 		})
 		.catch((error) => {
 			if (error.isTtyError) {
