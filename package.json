@@ -1,0 +1,13 @@
+{
+	"name": "kickstart-cli",
+	"version": "1.0.0",
+	"description": "A CLI to initialize boilerplate project template and also push it over to github to get users started directly with the project and not waste any time",
+	"main": "src/index.js",
+	"keywords": [
+		"kickstart",
+		"cli",
+		"boilerplate"
+	],
+	"author": "Sayan Mondal",
+	"license": "MIT"
+}
