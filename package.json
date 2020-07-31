@@ -9,5 +9,8 @@
 		"boilerplate"
 	],
 	"author": "Sayan Mondal",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"inquirer": "^7.3.3"
+	}
 }
