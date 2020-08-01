@@ -1,25 +1,25 @@
 const spawnSync = require("child_process").spawnSync;
-const CreateReactApp = (appName, packageManager) => {
+const GatsbyNew = (appName, packageManager) => {
 	if (packageManager === "npm") {
 		spawnSync(
-			"npx",
-			["create-react-app", appName],
+			"npm",
+			["i", "-g", "gatsby-cli"],
 			{
 				shell: true,
 				stdio: "inherit",
 			},
 			(error, stdout, stderr) => {
-				console.log("Creating app - ", appName);
+				console.log("Checking if gatsby is installed in your system");
 				if (error) {
 					console.error("stderr", stderr);
 					throw error;
 				}
 
 				console.log(stdout);
+				console.log("Gatsby check successful");
 			}
 		);
-	}
-	if (packageManager === "yarn") {
+	} else if (packageManager === "yarn") {
 		spawnSync(
 			"npm",
 			["i", "-g", "yarn"],
@@ -41,24 +41,42 @@ const CreateReactApp = (appName, packageManager) => {
 
 		spawnSync(
 			"yarn",
-			["create", "react-app", appName],
+			["glabal", "add", "gatsby-cli"],
 			{
 				shell: true,
 				stdio: "inherit",
 			},
 			(error, stdout, stderr) => {
-				console.log("Creating app - ", appName);
+				console.log("Checking if gatsby cli is installed in your system");
 				if (error) {
 					console.error("stderr", stderr);
 					throw error;
 				}
 
 				console.log(stdout);
+				console.log("Gatsby check successful");
 			}
 		);
 	}
+	spawnSync(
+		"gatsby",
+		["new", appName],
+		{
+			shell: true,
+			stdio: "inherit",
+		},
+		(error, stdout, stderr) => {
+			console.log("Creating app - ", appName);
+			if (error) {
+				console.error("stderr", stderr);
+				throw error;
+			}
+
+			console.log(stdout);
+		}
+	);
 };
 
 module.exports = {
-	CreateReactApp,
+	GatsbyNew,
 };

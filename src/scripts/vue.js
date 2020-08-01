@@ -1,21 +1,40 @@
-const { spawn } = require("child_process");
+const spawnSync = require("child_process").spawnSync;
 const VueCreate = (appName) => {
-	let script = "";
-	script = spawn("vue", ["create", appName], {
-		windowsHide: true,
-	});
+	spawnSync(
+		"npm",
+		["i", "-g", "vue"],
+		{
+			shell: true,
+			stdio: "inherit",
+		},
+		(error, stdout, stderr) => {
+			console.log("Checking if vue is already installed");
+			if (error) {
+				console.error("stderr", stderr);
+				throw error;
+			}
 
-	script.stdout.on("data", (data) => {
-		console.log(` ${data}`);
-	});
+			console.log(stdout);
+		}
+	);
 
-	script.stderr.on("data", (data) => {
-		console.log(`Error: ${data}`);
-	});
+	spawnSync(
+		"vue",
+		["create", appName],
+		{
+			shell: true,
+			stdio: "inherit",
+		},
+		(error, stdout, stderr) => {
+			console.log("Creating a vue app - ", appName);
+			if (error) {
+				console.error("stderr", stderr);
+				throw error;
+			}
 
-	script.on("close", (code) => {
-		console.log(`child process exited with code ${code}`);
-	});
+			console.log(stdout);
+		}
+	);
 };
 
 module.exports = {
