@@ -47,8 +47,7 @@ Supported
 <tr><td>
 Windows
 </td><td>
-<p>Project Creation Supported</p><br>
-<p>Publish to GitHub not supported yet</p>
+<p>Project Creation Supported<br />Publish to GitHub not supported yet</p>
 </td></tr>
 </tbody></table>
 
