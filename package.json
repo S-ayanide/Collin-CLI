@@ -5,6 +5,8 @@
 	"main": "src/index.js",
 	"bin": "src/index.js",
 	"keywords": [
+		"collin",
+		"starter",
 		"kickstart",
 		"cli",
 		"boilerplate"
