@@ -1,6 +1,6 @@
 {
 	"name": "collin",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A CLI to initialize boilerplate project template and also push it over to github to get users started directly with the project and not waste any time",
 	"main": "src/index.js",
 	"bin": "src/index.js",
