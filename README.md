@@ -1,4 +1,6 @@
 # Collin-CLI
+<p align="center">
+  <img src="https://i.ibb.co/wCp3vjg/collin.jpg" alt="collin-cli" width=300 >
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
@@ -6,7 +8,7 @@
 [downloads-image]:https://img.shields.io/npm/dm/collin.svg
 [npm-image]:https://img.shields.io/npm/v/collin.svg
 
-An interactive CLI to initialize boilerplate project template and also push it over to github to get users started directly with the project and not waste any time.
+An interactive CLI to initialize boilerplate project template and also push it over to github to get users started directly with the project and not waste any  time.
 
 # Installation
 ```
