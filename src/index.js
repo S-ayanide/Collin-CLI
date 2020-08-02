@@ -17,7 +17,7 @@ if (existingConfig) {
         type: 'list',
         name: 'projectType',
         message: 'What type of a project are you building?',
-        choices: ['React', 'Gatsby'],
+        choices: ['React', 'Gatsby', 'Vue'],
         default: 'React',
       },
       {
@@ -67,6 +67,8 @@ if (existingConfig) {
         cra.CreateReactApp(answers.projectName, answers.packageManager)
       } else if (answers.projectType === 'Gatsby') {
         gatsby.GatsbyNew(answers.projectName, answers.packageManager)
+      } else if (answers.projectType === 'Vue') {
+        vue.VueCreate(answers.projectName)
       }
       if (answers.isGithub) {
         github.DeployToGitHub(

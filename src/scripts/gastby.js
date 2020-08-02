@@ -1,24 +1,45 @@
 const spawnSync = require('child_process').spawnSync
 const GatsbyNew = (appName, packageManager) => {
   if (packageManager === 'npm') {
-    spawnSync(
-      'npm',
-      ['i', '-g', 'gatsby-cli'],
-      {
-        shell: true,
-        stdio: 'inherit',
-      },
-      (error, stdout, stderr) => {
-        console.log('Checking if gatsby is installed in your system')
-        if (error) {
-          console.error('stderr', stderr)
-          throw error
-        }
+    if (process.platform === 'linux') {
+      spawnSync(
+        'sudo',
+        ['npm', 'install', '--global', 'gatsby-cli'],
+        {
+          shell: true,
+          stdio: 'inherit',
+        },
+        (error, stdout, stderr) => {
+          console.log('Checking if gatsby is installed in your system')
+          if (error) {
+            console.error('stderr', stderr)
+            throw error
+          }
 
-        console.log(stdout)
-        console.log('Gatsby check successful')
-      },
-    )
+          console.log(stdout)
+          console.log('Gatsby check successful')
+        },
+      )
+    } else if (process.platform === 'win32') {
+      spawnSync(
+        'npm',
+        ['i', '-g', 'gatsby-cli'],
+        {
+          shell: true,
+          stdio: 'inherit',
+        },
+        (error, stdout, stderr) => {
+          console.log('Checking if gatsby is installed in your system')
+          if (error) {
+            console.error('stderr', stderr)
+            throw error
+          }
+
+          console.log(stdout)
+          console.log('Gatsby check successful')
+        },
+      )
+    }
   }
   if (packageManager === 'yarn') {
     spawnSync(
