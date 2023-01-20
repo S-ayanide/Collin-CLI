@@ -9,7 +9,13 @@
 [downloads-image]: https://img.shields.io/npm/dm/collin.svg
 [npm-image]: https://img.shields.io/npm/v/collin.svg
 
-An interactive CLI to initialize boilerplate project template and also push it over to github to get users started directly with the project and not waste any time.
+Collin CLI is an open-source command-line interface (CLI) that streamlines the process of creating and managing web development projects. With Collin CLI, users can quickly and easily create new projects, initialize a git repository, and push starter code to GitHub, all from the terminal.
+
+This project is built to support the creation of projects in React, Vue, and Gatsby, with more frameworks to come. It allows users to quickly set up a new project with the required dependencies and a basic file structure, saving time and effort.
+
+Initializing a git repository is as simple as running a single command, and users can also push their starter code straight to GitHub without having to manually create a repository on the GUI. This feature allows developers to quickly set up a new project and start working on it without having to spend time on setup and configuration.
+
+Collin CLI is perfect for developers who prefer to work in the terminal and want a streamlined and efficient workflow. It can save you a lot of time and effort and make your development process more productive and enjoyable.
 
 # Installation
 
