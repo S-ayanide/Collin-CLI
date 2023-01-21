@@ -19,11 +19,31 @@ Collin CLI is perfect for developers who prefer to work in the terminal and want
 
 # Installation
 
+[Collin CLI is available as an npm package](www.npmjs.com/package/collin). If you have Node.js installed locally, you can install it by running:
+
 ```
 npm install -g collin
 ```
 
-# Usage
+or if you are using Yarn:
+
+```
+yarn global add collin
+```
+
+---
+
+# Getting Started with Collin CLI
+
+Once you installed Collin CLI, you can verify it's working by running:
+
+```
+collin --version
+```
+
+## Usage
+
+All of Collin's choices are available as a single bundle, which can be used by typing this command:
 
 ```
 collin
@@ -34,6 +54,33 @@ or
 ```
 npx collin
 ```
+
+## Choices
+
+These are the available choices in Collin CLI as of now:
+
+```bash
+? What type of a project are you building? (Use arrow keys)
+❯ React
+  Gatsby
+  Vue
+```
+
+```bash
+? What package manager do you want to use? (Use arrow keys)
+❯ npm
+  yarn
+```
+
+```bash
+? What is the name of your project? (app)
+```
+
+```bash
+? Would you like to publish you application on GitHub? (y/N)
+```
+
+---
 
 # Support
 
@@ -65,12 +112,12 @@ Spawns synchronous `child process` depending upon user input/choices allowing th
 
 Things you can do right from the terminal itself
 
--   Project Creation (React, Vue, Gatsby)
--   Initializing a git repository
--   Pushing the starter code straight into GitHub without creating a repository manually on GUI
+- Project Creation (React, Vue, Gatsby)
+- Initializing a git repository
+- Pushing the starter code straight into GitHub without creating a repository manually on GUI
 
 # Future Scope
 
--   Right now the CLI is only available for unix and darwin systems, on Windows pushing to GitHub is still not achieved but project creation can be done.
--   Adding more interactivity based on developer feedback
--   Support for more frameworks
+- Right now the CLI is only available for unix and darwin systems, on Windows pushing to GitHub is still not achieved but project creation can be done.
+- Adding more interactivity based on developer feedback
+- Support for more frameworks
