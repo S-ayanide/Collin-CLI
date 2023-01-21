@@ -1,7 +1,7 @@
 # Collin-CLI
 
 <p align="center">
-  <img src="https://i.ibb.co/wCp3vjg/collin.jpg" alt="collin-cli" width=300 >
+  <img src="https://i.ibb.co/c846xgR/collin.png" alt="collin-cli" width=200 >
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
@@ -16,6 +16,9 @@ This project is built to support the creation of projects in React, Vue, and Gat
 Initializing a git repository is as simple as running a single command, and users can also push their starter code straight to GitHub without having to manually create a repository on the GUI. This feature allows developers to quickly set up a new project and start working on it without having to spend time on setup and configuration.
 
 Collin CLI is perfect for developers who prefer to work in the terminal and want a streamlined and efficient workflow. It can save you a lot of time and effort and make your development process more productive and enjoyable.
+
+<p align="center">
+  <img src="./assets/collin-working.gif" alt="collin-cli" width=500 >
 
 # Installation
 
